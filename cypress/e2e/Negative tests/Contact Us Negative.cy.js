@@ -18,7 +18,8 @@ describe('Contact Us NEgative tests', () => {
         cy.get('#contactform > :nth-child(2) > #subject').type('Test Subject Message'); 
         cy.get('#contactform > :nth-child(3) > #message').type('Test Message'); 
         cy.get('#contactform > #submit').click();
-        //u should receive error message
+        //u should receive error message.
+        
       });
     it('Contact Us should display error message on too short message submission', () => {
         cy.get('.input-with-icon-left > #name').type('John Doe'); 
