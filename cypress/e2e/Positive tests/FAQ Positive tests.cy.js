@@ -54,6 +54,7 @@ describe('FAQ Positive tests', () => {
         cy.get(':nth-child(9) > .accordion-header').should('be.visible');
         cy.get(':nth-child(10) > .accordion-header').should('be.visible');
       });
+      
   
     beforeEach(() => {
       cy.viewport(1920, 1080)
