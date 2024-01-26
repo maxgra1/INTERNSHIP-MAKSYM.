@@ -54,6 +54,5 @@ Cypress.Commands.add('Ste1', () => {
     cy.get('[name="stories"]').select('1 + Basement')
     cy.get('[name="squarefeet"]').select('750')
     cy.get('input[name="houseage"]').type('70')
-
 })
 
