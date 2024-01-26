@@ -1,8 +1,8 @@
 ///<reference types = "Cypress"/>
 describe('Contact Us Negative', () => {
-    const baseUrl = 'https://xpertesy.com/contact-us';
+    const baseUrl = 'https://stg.xpertesy.com/contact-us';
     it('Url should contain', () => {
-        cy.url('https://xpertesy.com/contact-us').should('include', '/contact-us');
+        cy.url('https://stg.xpertesy.com/contact-us').should('include', '/contact-us');
     });
     it('Contact Us should be visible', () => {
         cy.get('#contactUs').contains('Contact Us');
@@ -54,6 +54,6 @@ describe('Contact Us Negative', () => {
       });
     beforeEach(() => {
       cy.viewport(1920, 1080);
-      cy.visit('https://xpertesy.com/contact-us');
+      cy.visit('https://stg.xpertesy.com/contact-us');
     });
   });

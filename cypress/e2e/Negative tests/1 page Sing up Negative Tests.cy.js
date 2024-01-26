@@ -1,10 +1,10 @@
 ///<reference types = "Cypress"/>
 describe('Sing Up negative Tests', () => {
-    const baseUrl = 'https://xpertesy.com/ed/';
+    const baseUrl = 'https://stg.xpertesy.com/ed/';
   
     beforeEach(() => {
       cy.viewport(1920, 1080)
-      cy.visit('https://xpertesy.com/ed/');
+      cy.visit('https://stg.xpertesy.com/ed/');
     });
   
     it('Sing up', () => {

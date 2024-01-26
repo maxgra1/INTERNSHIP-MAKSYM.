@@ -1,6 +1,6 @@
 ///<reference types = "Cypress"/>
 describe('FAQ Positive tests', () => {
-    const baseUrl = 'https://xpertesy.com/ed/#faq-section';
+    const baseUrl = 'https://stg.xpertesy.com/ed/#faq-section';
     it('FAQ should be visible', () => {
         cy.get(':nth-child(7) > a').click();
         cy.get('#faq > .container > .row > .col-xl-12 > .title-sub-group-home').should('be.visible');
@@ -58,7 +58,7 @@ describe('FAQ Positive tests', () => {
   
     beforeEach(() => {
       cy.viewport(1920, 1080)
-      cy.visit('https://xpertesy.com/ed/#faq-section');
+      cy.visit('https://stg.xpertesy.com/ed/#faq-section');
     });
   
     // it('Sing up', () => {
