@@ -1,4 +1,4 @@
-/<reference types = "Cypress"/>
+///<reference types = "Cypress"/>
 beforeEach(() => {
   cy.viewport(1920, 1080)
 });
@@ -60,7 +60,7 @@ it('Guest option can be chosen And Verify the seesion later is created  ', () =>
   cy.get('#start-session-step-2 > .copy-submit-box').click();
   cy.get('#guestSuccessModal > .mt-5').should('be.visible');
   cy.get('#guestSuccessModal > .close-success').click();
-  cy.wait(3000)
+  cy.wait(4000)
   cy.get('.headline > h3').should('not.contain', '0');
 });
 })
