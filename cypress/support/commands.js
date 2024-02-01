@@ -63,4 +63,19 @@ Cypress.Commands.add('Log12', () => {
     cy.get('#password-login').type('Maksgrod20');
     cy.get('#login-form > .button').click();
 })
+Cypress.Commands.add('Rpass', () => {
+    it('Generate Password', () => {
+        const generatePassword = (length) => {
+            const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+            return password;
+        };
+        const Pass = generatePassword(8);
+        cy.log('Generate paswword:', Pass);
+    });
+})
 
