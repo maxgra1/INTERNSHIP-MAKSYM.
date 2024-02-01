@@ -55,4 +55,12 @@ Cypress.Commands.add('Ste1', () => {
     cy.get('[name="squarefeet"]').select('750')
     cy.get('input[name="houseage"]').type('70')
 })
+Cypress.Commands.add('Log12', () => {
+    cy.visit('https://stg.xpertesy.com/ed');
+    cy.get('span.activate-button').click();
+    cy.get('#emailaddress-start').type('maksgrod03@gmail.com')
+    cy.get('#start-form > .button').click();
+    cy.get('#password-login').type('Maksgrod20');
+    cy.get('#login-form > .button').click();
+})
 
