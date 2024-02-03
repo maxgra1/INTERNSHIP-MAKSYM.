@@ -32,7 +32,8 @@ describe('Contact Us Negative', () => {
     cy.Rpass();
     cy.Log12();
     cy.wait(2000)
-    cy.visit('https://stg.xpertesy.com/dashboard/settings/');
+    cy.get('#avatar-image').click();
+    cy.get('.user-menu-small-nav > :nth-child(2) > a').invoke('removeAttr', 'target').click();
     cy.get(':nth-child(1) > .input-with-icon-left > .with-border').type('Maksgrod20')
     cy.get(':nth-child(2) > .input-with-icon-left > .with-border').type(Pass);
     cy.get(':nth-child(3) > .input-with-icon-left > .with-border').type(Pass);
@@ -44,9 +45,4 @@ describe('Contact Us Negative', () => {
     cy.get('.align-items-end').click();
     cy.get('#changepass-notification').should('be.visible')
   });
-
-  // it('Contact Us should be visible', () => {
-
-  //   });
-
 });
